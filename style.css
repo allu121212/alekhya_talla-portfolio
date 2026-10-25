@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #253047;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: #ffffff;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav h2 {
+    color: #173b70;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #34445c;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #1769d2;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 75px 20px 80px;
+    background: #eaf1fb;
+}
+
+.hero h1 {
+    color: #173b70;
+    font-size: clamp(30px, 5vw, 44px);
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    color: #1769d2;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: #53627a;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #1769d2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #124f9e;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 22px;
+}
+
+section {
+    background: #ffffff;
+    margin-bottom: 22px;
+    padding: 26px;
+    border-radius: 10px;
+    border: 1px solid #e4eaf2;
+    box-shadow: 0 3px 12px rgba(25, 50, 85, 0.04);
+}
+
+section h2 {
+    color: #173b70;
+    font-size: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eaf1fb;
+}
+
+section p {
+    color: #53627a;
+    margin-bottom: 8px;
+}
+
+/* Education */
+#education article {
+    padding: 15px 18px;
+    background: #f7f9fd;
+    border-left: 4px solid #1769d2;
+    border-radius: 5px;
+}
+
+#education h3 {
+    color: #253047;
+    margin-bottom: 5px;
+}
+
+/* Technical Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list span {
+    background: #eaf1fb;
+    color: #173b70;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #d5e4f8;
+}
+
+/* Projects */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#projects h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+#projects article {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e0e7f1;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#projects article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(25, 50, 85, 0.09);
+}
+
+#projects h3 {
+    color: #173b70;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#projects article p {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+#projects article a {
+    display: inline-block;
+    color: #1769d2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#projects article a:hover {
+    text-decoration: underline;
+}
+
+/* Contact */
+#contact a {
+    color: #1769d2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #173b70;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 55px 18px;
+    }
+
+    main {
+        padding: 0 14px;
+        margin-top: 18px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 16px;
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+    }
+}
