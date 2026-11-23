@@ -1,12 +1,13 @@
-<<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alekhya Talla | Software Developer Portfolio</title>
+    <title>Alekhya Talla | Software Developer</title>
 
-    <meta name="description" content="Alekhya Talla's portfolio showcasing Python, SQL, web development, machine learning skills, and projects.">
+    <meta name="description" content="Explore Alekhya Talla's portfolio, software development skills, Python projects and AI applications.">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,65 +15,144 @@
 <body>
 
     <!-- Navigation -->
-    <header>
-        <nav>
-            <h2>Alekhya Talla</h2>
+    <header class="header" id="home">
+        <nav class="navbar">
+            <a href="#home" class="logo">Alekhya<span>.</span></a>
 
-            <ul>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
         </nav>
 
-        <!-- Introduction -->
-        <div class="hero">
-            <h1>Hi, I'm Alekhya Talla</h1>
-            <h3>Aspiring Software Developer</h3>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
 
-            <p>
-                AI &amp; Data Science Graduate | Python Developer
-            </p>
+                <p class="hero-greeting">HELLO, WELCOME TO MY PORTFOLIO</p>
 
-            <a href="#projects" class="btn">
-                Explore My Projects
-            </a>
-        </div>
+                <h1>
+                    Hi, I'm <span>Alekhya Talla</span>
+                </h1>
+
+                <h2>
+                    Aspiring <span id="typing-text">Software Developer</span>
+                </h2>
+
+                <p class="hero-description">
+                    AI &amp; Data Science graduate passionate about
+                    Python programming, software development and
+                    building practical technology solutions.
+                    I enjoy turning ideas into useful applications
+                    while continuously learning new technologies.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/allu121212"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub ↗
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/alekhya1212"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+
+                <div class="hero-card">
+                    <span class="code-icon">&lt;/&gt;</span>
+                    <h3>Building Ideas</h3>
+                    <p>Learning. Developing. Growing.</p>
+                </div>
+            </div>
+        </section>
     </header>
 
     <main>
 
-        <!-- About -->
-        <section id="about">
-            <h2>About Me</h2>
+        <!-- About Section -->
+        <section id="about" class="section about-section">
 
-            <p>
-                I am an Artificial Intelligence and Data Science graduate
-                interested in software development, Python programming,
-                SQL, and machine learning. I enjoy learning new technologies
-                and building practical projects to improve my technical skills.
-            </p>
+            <div class="section-heading">
+                <p>GET TO KNOW ME</p>
+                <h2>About <span>Me</span></h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    I am an Artificial Intelligence and Data Science
+                    graduate interested in software development,
+                    Python programming, SQL and machine learning.
+                    I enjoy exploring new technologies and building
+                    practical projects that help me strengthen my
+                    problem-solving and development skills.
+                </p>
+
+                <p>
+                    My goal is to grow as a software developer by
+                    applying my technical knowledge, learning from
+                    real-world challenges and contributing to
+                    meaningful projects.
+                </p>
+            </div>
+
         </section>
 
-        <!-- Education -->
-        <section id="education">
-            <h2>Education</h2>
+        <!-- Education Section -->
+        <section id="education" class="section">
 
-            <article>
-                <h3>
-                    B.Tech in Artificial Intelligence and Data Science
-                </h3>
+            <div class="section-heading">
+                <p>MY ACADEMIC BACKGROUND</p>
+                <h2>My <span>Education</span></h2>
+            </div>
 
-                <p>Sree Rama Engineering College</p>
-                <p>Percentage: 85%</p>
-            </article>
+            <div class="education-card">
+                <div class="education-icon">🎓</div>
+
+                <div>
+                    <h3>B.Tech in Artificial Intelligence and Data Science</h3>
+                    <p>Sree Rama Engineering College</p>
+                    <p class="education-score">Percentage: 85%</p>
+                </div>
+            </div>
+
         </section>
 
-        <!-- Technical Skills -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+
+            <div class="section-heading">
+                <p>WHAT I WORK WITH</p>
+                <h2>Technical <span>Skills</span></h2>
+            </div>
 
             <div class="skills-list">
                 <span>Python</span>
@@ -83,108 +163,152 @@
                 <span>Django</span>
                 <span>Machine Learning</span>
                 <span>Deep Learning</span>
-                <span> DSA </span>
+                <span>Data Structures and Algorithms</span>
             </div>
+
         </section>
 
-        <!-- Projects -->
-        <section id="projects">
-            <h2>My Projects</h2>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
 
-            <article>
-                <h3>IT Service Management</h3>
+            <div class="section-heading">
+                <p>WHAT I'VE BUILT</p>
+                <h2>My <span>Projects</span></h2>
+            </div>
 
-                <p>
-                    A hackathon project developed to demonstrate
-                    a practical IT service management solution.
-                </p>
+            <div class="project-container">
 
-                <a
-                    href="https://github.com/allu121212/it_service_management"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Repository
-                </a>
-            </article>
+                <article class="project-card">
+                    <div class="project-number">01</div>
 
-            <article>
-                <h3>SHL Conversational Assessment Recommender</h3>
+                    <h3>IT Service Management</h3>
 
-                <p>
-                    A conversational chatbot project designed to recommend
-                    relevant assessments based on user requirements.
-                </p>
+                    <p>
+                        A hackathon project focused on developing
+                        a practical IT service request management
+                        solution.
+                    </p>
 
-                <a
-                    href= "https://github.com/allu121212/shl-chatbot"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Repository
-                </a>
-            </article>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Database</span>
+                    </div>
 
-            <article>
-                <h3>Pest Classification</h3>
+                    <a href="https://github.com/allu121212/it_service_management"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View GitHub Repository ↗
+                    </a>
+                </article>
 
-                <p>
-                    A deep learning project using OpenCV for image
-                    preprocessing and ResNet-18 for pest image classification.
-                </p>
+                <article class="project-card">
+                    <div class="project-number">02</div>
 
-                <a
-                    href= "https://github.com/allu121212/Pest-Classifier" 
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    View Repository
-                </a>
-            </article>
+                    <h3>SHL Conversational Assessment Recommender</h3>
+
+                    <p>
+                        A conversational chatbot designed to
+                        recommend relevant assessments based on
+                        user requirements.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Chatbot</span>
+                    </div>
+
+                    <a href="https://github.com/allu121212/shl-chatbot"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View GitHub Repository ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">03</div>
+
+                    <h3>Pest Classification</h3>
+
+                    <p>
+                        A deep learning application that classifies
+                        pest images using a ResNet-18 model and
+                        image preprocessing techniques.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>PyTorch</span>
+                        <span>CNN</span>
+                        <span>Django</span>
+                    </div>
+
+                    <a href="https://github.com/allu121212/Pest-Classifier"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="project-link">
+                        View GitHub Repository ↗
+                    </a>
+                </article>
+
+            </div>
+
         </section>
 
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact Me</h2>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
 
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:alekhyar1212@gmail.com">
-                    alekhyar1212@gmail.com
-                </a>
-            </p>
+            <div class="section-heading">
+                <p>LET'S CONNECT</p>
+                <h2>Contact <span>Me</span></h2>
+            </div>
 
-            <p>
-                <strong>Phone:</strong>
-                <a href="tel:+918179650476">
-                    +91 8179650476
-                </a>
-            </p>
+            <div class="contact-content">
 
-            <p>
-                <strong>GitHub:</strong>
-                <a
-                    href="https://github.com/allu121212"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Visit My GitHub
-                </a>
-            </p>
+                <p>
+                    I'm interested in software development
+                    opportunities and connecting with people
+                    in the technology community.
+                </p>
 
-            <p>
-                <strong>LinkedIn:</strong>
-                <a
-                    href="https://www.linkedin.com/in/alekhya1212"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Connect on LinkedIn
+                <a href="mailto:alekhyar1212@gmail.com" class="contact-link">
+                    ✉ alekhyar1212@gmail.com
                 </a>
-            </p>
+
+                <a href="tel:+918179650476" class="contact-link">
+                    ☎ +91 8179650476
+                </a>
+
+                <a href="https://github.com/allu121212"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-link">
+                    GitHub Profile ↗
+                </a>
+
+                <a href="https://www.linkedin.com/in/alekhya1212"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-link">
+                    LinkedIn Profile ↗
+                </a>
+
+            </div>
+
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Alekhya Talla. All rights reserved.</p>
+    <footer class="footer">
+        <p>Designed and developed by Alekhya Talla</p>
+        <p>© 2026 All rights reserved.</p>
+        <a href="#home">Back to Top ↑</a>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
