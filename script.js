@@ -1,46 +1,70 @@
-const projects = [
-    {
-        name: "IT Service Management",
-        description: "A hackathon project developed to demonstrate a practical IT service management solution.",
-        link: "https://github.com/allu121212/service_management"
-    },
-    {
-        name: "SHL Conversational Assessment Recommender",
-        description: "A conversational chatbot project designed to recommend relevant assessments.",
-        link: "https://github.com/allu121212/shl-chatbot"
-    },
-    {
-        name: "Pest Classification",
-        description: "A deep learning project using ResNet-18 to classify pest images.",
-        link: "https://github.com/allu121212/Pest-Classifier"
-    }
+
+// Typing Animation
+
+const typingText = document.getElementById("typing-text");
+
+const roles = [
+    "Software Developer",
+    "Python Developer",
+    "AI Enthusiast"
 ];
 
-const projectList = document.getElementById("projects");
+let roleIndex = 0;
+let characterIndex = 0;
+let deleting = false;
 
-if (projectList) {
-    const projectContainer = document.createElement("div");
-    projectContainer.className = "project-list";
+function typeEffect() {
+    const currentRole = roles[roleIndex];
 
-    projects.forEach((project) => {
-        const card = document.createElement("article");
-        card.className = "project-card";
+    if (deleting) {
+        characterIndex--;
+    } else {
+        characterIndex++;
+    }
 
-        const title = document.createElement("h3");
-        title.textContent = project.name;
+    typingText.textContent = currentRole.substring(0, characterIndex);
 
-        const description = document.createElement("p");
-        description.textContent = project.description;
+    let speed = deleting ? 50 : 100;
 
-        const link = document.createElement("a");
-        link.href = project.link;
-        link.textContent = "View on GitHub";
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
+    if (!deleting && characterIndex === currentRole.length) {
+        deleting = true;
+        speed = 1200;
+    } else if (deleting && characterIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        speed = 400;
+    }
 
-        card.append(title, description, link);
-        projectContainer.appendChild(card);
-    });
-
-    projectList.appendChild(projectContainer);
+    setTimeout(typeEffect, speed);
 }
+
+typeEffect();
+
+
+// Mobile Navigation
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+
+    const isOpen = navLinks.classList.contains("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+
+// Close Menu After Clicking a Link
+
+const navigationLinks = document.querySelectorAll(".nav-links a");
+
+navigationLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
